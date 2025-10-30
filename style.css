@@ -1,0 +1,512 @@
+html {
+  scroll-behavior: smooth;
+}
+body{
+  background-color: #030a21;;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* 🔹 Sosial Link */
+.sosial-link{
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 40px;
+  margin-top: 15px;
+  font-size: 30px;
+  z-index: 2000;
+}
+.sosial-link a {
+  color: #60a5fa;  /* biru lembut */
+  font-size: 32px;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+.sosial-link a:hover {
+  transform: scale(1.2);
+}
+
+.sosial-link .facebook:hover{
+  color: #1877f2;
+}
+.sosial-link .instagram:hover{
+  color: #e1306c;
+}
+.sosial-link .youtube:hover{
+  color: #ff0000;
+}
+.sosial-link .whatsaap:hover{
+  color: #25D366;
+}
+.sosial-link .github:hover{
+  color: #fff;
+}
+
+/*  Navbar */
+.nav-link {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 65px;
+  z-index: 1500;
+}
+.nav-bar{
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+}
+.nav-bar a{
+  text-decoration: none;
+  color: #9c9fa9;
+  font-size: 14px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid rgb(90, 90, 100);
+  background-color: #0c182f;
+}
+.nav-bar a:hover{
+  background-color: #1877f2;
+  border-radius: 20%;
+}
+
+/* 🔹 Profil */
+.profil{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  padding-top: 120px;
+}
+.foto{
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  color: #14c8e0;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  font-size: 15px;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+.box {
+  width: 80%;
+  padding: 10px;
+  background-color: #030a21;
+  overflow: hidden;       /* supaya teks keluar area tersembunyi */
+  border-radius: 10px;
+  height: 20px;           /* tinggi box */
+  display: flex;
+  align-items: center;
+}
+.text_berjalan{
+  display: inline-block;
+  white-space: nowrap;    /* teks tidak pindah baris */
+  color: #60a5fa;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 0 0 10px #14c8e0;
+  animation: gerak 25s linear infinite;
+}
+@keyframes gerak {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+/* ##ABOUT## */
+.aboutme{
+  height: 120vh;          /* full layar */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #05122c, #030a21);
+  color: #cbd5e1;
+}
+.aboutme h1{
+  color: #14c8e0;
+}
+.foto_about {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin-top: 0;
+}
+
+.aboutme p {
+  width: 60%;
+  color: #14c8e0;
+  margin-top: 10px;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* ##SKILL## */
+.myskill{
+  height: 100vh;
+  background: linear-gradient(to bottom, #030a21, #05122c);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.myskill h1 {
+  font-size: 25px;
+  color: #14c8e0;
+  margin-bottom: 20px;
+  margin-top: 80px;
+  letter-spacing: 3px;
+}
+
+/* 🔹 Grid Skill */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* otomatis responsif */
+  gap: 40px;
+  width: 80%;
+  max-width: 900px;
+}
+
+.skill-item {
+  background-color: #0c182f;
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #14c8e0;
+}
+
+.skill-item img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.skill-item p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #9c9fa9;
+  letter-spacing: 1px;
+}
+
+/* ##CONTACT## */
+.contact-section {
+  background: linear-gradient(to bottom, #030a21, #081a3a);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.contact-section h1 {
+  color: #14c8e0;
+  font-size: 25px;
+  margin-bottom: 5px;
+  margin-top: 40px;
+}
+
+.contact-section h2 {
+  font-weight: normal;
+  color: #a9b3c1;
+  margin-bottom: 20px;
+}
+
+/* 🔹 Info Kontak Horizontal */
+.contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-item i {
+  color: #14c8e0;
+  font-size: 22px;
+}
+
+.info-item p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* 🔹 Form Styling */
+form {
+  max-width: 600px;
+  margin: auto;
+  background: #0c182f;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background: #091327;
+  border-radius: 8px;
+  padding: 10px 15px;
+  border: 1px solid #14c8e0;
+}
+
+.form-group i {
+  color: #14c8e0;
+  margin-right: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+  border: none;
+  background: transparent;
+  color: white;
+  width: 100%;
+  outline: none;
+  font-size: 14px;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+}
+
+.btn-register {
+  display: block;
+  width: 100%;
+  background: #14c8e0;
+  color: #030a21;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-register:hover {
+  background: #0ea5e9;
+  transform: scale(1.03);
+}
+
+.footer{
+  background-color: #0c182f; /* warna biru gelap elegan */
+  color: #9ca3af; /* abu lembut */
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 0px;
+  border-top: 1px solid #1e293b; /* garis tipis pemisah */
+}
+
+/* Tombol Kembali ke Atas */
+#toTopBtn {
+  position: fixed;        /* selalu menempel di layar */
+  bottom: 30px;           /* jarak dari bawah layar */
+  right: 30px;            /* jarak dari kanan layar */
+  z-index: 1000;          /* biar di atas elemen lain */
+  background-color: #14c8e0;
+  color: #fb0606;
+  border: none;
+  outline: none;
+  padding: 12px 14px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  display: none;           /* disembunyikan dulu */
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(20,200,224,0.5);
+}
+
+#toTopBtn:hover {
+  background-color: #0ea5e9;
+  transform: scale(1.1);
+}
+
+/* ========================= */
+/* 📱 RESPONSIVE DESIGN FIX */
+/* ========================= */
+
+/* Untuk layar di bawah 768px (tablet & HP) */
+@media (max-width: 768px) {
+
+  /* 🔹 Sosial link */
+  .sosial-link {
+    flex-wrap: wrap;
+    gap: 18px;
+    font-size: 24px;
+  }
+
+  /* 🔹 Navbar — tetap horizontal */
+  .nav-link {
+    top: 70px;
+  }
+
+  .nav-bar {
+    display: flex;
+    flex-direction: row; /* tetap horizontal */
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap; /* biar gak ketindihan kalau layar kecil */
+  }
+
+  .nav-bar a {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  /* 🔹 Profil */
+  .profil {
+    padding-top: 100px;
+  }
+
+  .foto {
+    width: 130px;
+    height: 130px;
+  }
+
+  .title {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .box {
+    width: 90%;
+    height: 30px;
+  }
+
+  .text_berjalan {
+    font-size: 15px;
+    animation-duration: 28s;
+  }
+
+  /* 🔹 ABOUT */
+  .aboutme p {
+    width: 85%;
+    font-size: 13px;
+  }
+
+  /* 🔹 SKILL GRID (perkecil tampilan skill) */
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom agar tetap rapi */
+    gap: 15px;
+    width: 90%;
+  }
+
+  .skill-item {
+    padding: 12px;
+  }
+
+  .skill-item img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .skill-item p {
+    font-size: 13px;
+  }
+
+  /* 🔹 CONTACT SECTION */
+  .contact-info {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  form {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .form-group {
+    padding: 8px 10px;
+  }
+
+  textarea {
+    height: 60px;
+  }
+
+  .btn-register {
+    padding: 10px;
+  }
+
+  /* 🔹 Tombol ke atas */
+  #toTopBtn {
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 12px;
+    font-size: 16px;
+  }
+
+  /* 🔹 Footer */
+  .footer {
+    font-size: 13px;
+    padding: 15px 0;
+  }
+}
+
+/* Untuk layar di bawah 480px (HP kecil) */
+@media (max-width: 480px) {
+
+  /* Navbar tetap horizontal tapi teks lebih kecil */
+  .nav-bar {
+    gap: 6px;
+  }
+
+  .nav-bar a {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+
+  /* 🔹 Skill grid jadi 2 kolom */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .skill-item img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .skill-item p {
+    font-size: 12px;
+  }
+
+  /* 🔹 Box teks */
+  .box {
+    height: 35px;
+  }
+
+  .text_berjalan {
+    font-size: 13px;
+  }
+}
